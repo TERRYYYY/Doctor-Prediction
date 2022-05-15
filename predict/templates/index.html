@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    
+
+<!-- header section starts  -->
+
+<header>
+
+<div class="container">
+
+    <a href="/" class="logo"><span>H</span>ealth<span>C</span>are.</a>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'login' %}">Predict</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/register" style="margin-left: 150px;">Sign Up</a></li>
+            <span style="font-size: 30px;">|</span>
+            <li><a href="{% url 'login' %}" style="margin-left: 0px;">Login</a></li>
+        </ul>
+        
+    </nav>
+
+    <div class="fas fa-bars"></div>
+
+</div>
+
+</header>
+
+<!-- header section ends  -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+<div class="container">
+    <div class="row min-vh-100 align-items-center text-center text-md-left">
+        <div class="col-md-6 pr-md-5" >
+            <img src="{% static 'images/home-img.svg' %}" alt="">
+        </div>
+
+        <div class="col-md-6 pl-md-5 content" >
+            <h1><span>stay</span> safe, <span>stay</span> healthy.</h1>
+            <h3>caring for you.</h3>
+            <a href="{% url 'login' %}"><button class="button">Take A Look</button></a>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- home section ends  -->
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <div class="container min-vh-100">
+
+        <div class="row justify-content-center">
+
+            <h1 class="heading"><span></span> make an appointment <span></span></h1>
+
+            <div class="col-md-10" >
+
+                <form action="">
+
+                    <div class="inputBox">
+                        <input type="text" placeholder="full name">
+                        <input type="number" placeholder="phone">
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="email" placeholder="your email">
+                        <select name="" id="">
+                            <option value="" disabled selected>make an appointment</option>
+                            <option value="09-11 am">09-11 am</option>
+                            <option value="11-03 pm">11-03 pm</option>
+                            <option value="03-06 pm">03-06 pm</option>
+                            <option value="06-09 pm">06-09 pm</option>
+                        </select>
+                    </div>
+
+                    <textarea name="" id="" cols="30" rows="10" placeholder="message ( optional )"></textarea>
+
+                    <input type="submit" name="" id="" value="make appointment" class="button">
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
